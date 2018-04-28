@@ -3,6 +3,7 @@ package com.cbwleft.sms.mgr.modular.template.service;
 import java.util.List;
 
 import com.cbwleft.sms.dao.model.Template;
+import com.cbwleft.sms.mgr.core.service.IService;
 
 /**
  * <p>
@@ -12,16 +13,6 @@ import com.cbwleft.sms.dao.model.Template;
  * @author cbwleft
  * @since 2018-04-28
  */
-public interface ITemplateService {
-
-	Template selectById(Integer templateId);
-
-	List<Template> selectList(Object object);
-
-	int insert(Template template);
-
-	int deleteById(Integer templateId);
-
-	int updateById(Template template);
+public interface ITemplateService extends IService<Template> {
 
 }

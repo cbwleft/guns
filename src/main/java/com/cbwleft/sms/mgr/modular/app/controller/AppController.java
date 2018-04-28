@@ -49,7 +49,7 @@ public class AppController extends BaseController {
      * 跳转到修改应用管理
      */
     @RequestMapping("/app_update/{appId}")
-    public String appUpdate(@PathVariable Integer appId, Model model) {
+    public String appUpdate(@PathVariable Byte appId, Model model) {
         App app = appService.selectById(appId);
         model.addAttribute("item",app);
         LogObjectHolder.me().set(app);
@@ -80,7 +80,7 @@ public class AppController extends BaseController {
      */
     @RequestMapping(value = "/delete")
     @ResponseBody
-    public Object delete(@RequestParam Integer appId) {
+    public Object delete(@RequestParam Byte appId) {
         appService.deleteById(appId);
         return SUCCESS_TIP;
     }
@@ -100,7 +100,7 @@ public class AppController extends BaseController {
      */
     @RequestMapping(value = "/detail/{appId}")
     @ResponseBody
-    public Object detail(@PathVariable("appId") Integer appId) {
+    public Object detail(@PathVariable("appId") Byte appId) {
         return appService.selectById(appId);
     }
 }

@@ -1,8 +1,7 @@
 package com.cbwleft.sms.mgr.modular.app.service;
 
-import java.util.List;
-
 import com.cbwleft.sms.dao.model.App;
+import com.cbwleft.sms.mgr.core.service.IService;
 
 /**
  * <p>
@@ -12,16 +11,6 @@ import com.cbwleft.sms.dao.model.App;
  * @author cbwleft
  * @since 2018-04-28
  */
-public interface IAppService {
-
-	List<App> selectList(Object object);
-
-	App selectById(Integer appId);
-
-	int insert(App app);
-
-	int deleteById(Integer appId);
-
-	int updateById(App app);
+public interface IAppService extends IService<App>{
 
 }

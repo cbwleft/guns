@@ -48,7 +48,7 @@ public class TemplateController extends BaseController {
      * 跳转到修改短信模板
      */
     @RequestMapping("/template_update/{templateId}")
-    public String templateUpdate(@PathVariable Integer templateId, Model model) {
+    public String templateUpdate(@PathVariable Short templateId, Model model) {
         Template template = templateService.selectById(templateId);
         model.addAttribute("item",template);
         LogObjectHolder.me().set(template);
@@ -79,7 +79,7 @@ public class TemplateController extends BaseController {
      */
     @RequestMapping(value = "/delete")
     @ResponseBody
-    public Object delete(@RequestParam Integer templateId) {
+    public Object delete(@RequestParam Short templateId) {
         templateService.deleteById(templateId);
         return SUCCESS_TIP;
     }
@@ -99,7 +99,7 @@ public class TemplateController extends BaseController {
      */
     @RequestMapping(value = "/detail/{templateId}")
     @ResponseBody
-    public Object detail(@PathVariable("templateId") Integer templateId) {
+    public Object detail(@PathVariable("templateId") Short templateId) {
         return templateService.selectById(templateId);
     }
 }
