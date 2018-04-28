@@ -103,6 +103,6 @@ Message.search = function () {
 $(function () {
     var defaultColunms = Message.initColumn();
     var table = new BSTable(Message.id, "/message/list", defaultColunms);
-    table.setPaginationType("client");
+    table.setPaginationType("server");
     Message.table = table.init();
 });

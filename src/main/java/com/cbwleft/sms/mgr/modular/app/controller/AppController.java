@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cbwleft.sms.dao.model.App;
@@ -91,6 +94,9 @@ public class AppController extends BaseController {
     @RequestMapping(value = "/update")
     @ResponseBody
     public Object update(App app) {
+    	if(app.getChannelParams() != null) {
+    		app.setChannelParams(app.getChannelParams().trim());
+    	}
         appService.updateById(app);
         return SUCCESS_TIP;
     }

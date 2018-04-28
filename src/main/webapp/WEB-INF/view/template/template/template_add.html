@@ -9,8 +9,11 @@
                 <div class="col-sm-6 b-r">
                             <#input id="channelTemplateNo" name="第三方渠道模板" underline="true"/>
                             <#input id="name" name="模板名称" underline="true"/>
-                            <#input id="type" name="短信类型" underline="true"/>
-                            <#input id="template" name="短信模板"/>
+                            <#select id="type" name="短信类型" underline="true">
+								<option value="0">验证码</option>
+								<option value="1">普通短信</option>
+							</#select>
+                            <#textarea id="template" name="短信模板"/>
                 </div>
 
                 <div class="col-sm-6">

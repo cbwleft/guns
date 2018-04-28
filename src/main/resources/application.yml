@@ -88,6 +88,7 @@ biz:
 logging:
   level.root: info
   level.com.stylefeng: debug
+  level.com.cbwleft.sms: debug
   path: logs/
   file: guns.log
 

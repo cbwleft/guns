@@ -5,11 +5,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cbwleft.sms.dao.model.Message;
 import com.cbwleft.sms.mgr.modular.message.service.IMessageService;
+import com.github.pagehelper.PageHelper;
 import com.stylefeng.guns.common.controller.BaseController;
+import com.stylefeng.guns.common.page.PageReq;
 import com.stylefeng.guns.core.log.LogObjectHolder;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -61,7 +66,10 @@ public class MessageController extends BaseController {
     @RequestMapping(value = "/list")
     @ResponseBody
     public Object list(String condition) {
-        return messageService.selectList(null);
+    	PageReq params = defaultPage();
+        PageHelper.offsetPage(params.getOffset(), params.getOffset());
+        List<Message> result = messageService.selectList(null);
+        return packForBT(result);
     }
 
     /**

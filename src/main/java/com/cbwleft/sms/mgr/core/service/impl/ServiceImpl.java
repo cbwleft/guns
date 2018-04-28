@@ -21,7 +21,7 @@ public class ServiceImpl <M extends BaseMapper<T>, T> implements IService<T>{
 
 	@Override
 	public boolean insert(T entity) {
-		int result = baseMapper.insert(entity);
+		int result = baseMapper.insertSelective(entity);
 		return result > 0;
 	}
 
@@ -33,7 +33,7 @@ public class ServiceImpl <M extends BaseMapper<T>, T> implements IService<T>{
 
 	@Override
 	public boolean updateById(T entity) {
-		int result = baseMapper.updateByPrimaryKey(entity);
+		int result = baseMapper.updateByPrimaryKeySelective(entity);
 		return result > 0;
 	}
 
