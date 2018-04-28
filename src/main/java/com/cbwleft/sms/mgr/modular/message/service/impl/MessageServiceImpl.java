@@ -1,4 +1,4 @@
-package com.stylefeng.guns.modular.message.service.impl;
+package com.cbwleft.sms.mgr.modular.message.service.impl;
 
 import java.util.List;
 
@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 
 import com.cbwleft.sms.dao.mapper.MessageMapper;
 import com.cbwleft.sms.dao.model.Message;
-import com.stylefeng.guns.modular.message.service.IMessageService;
+import com.cbwleft.sms.mgr.modular.message.service.IMessageService;
 
 /**
  * <p>
  * 短信表 服务实现类
  * </p>
  *
- * @author cbwleft123
+ * @author cbwleft
  * @since 2018-04-28
  */
 @Service

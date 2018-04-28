@@ -1,22 +1,21 @@
-package com.stylefeng.guns.modular.template.service.impl;
+package com.cbwleft.sms.mgr.modular.template.service.impl;
 
 import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cbwleft.sms.dao.mapper.TemplateMapper;
 import com.cbwleft.sms.dao.model.Template;
-import com.stylefeng.guns.modular.template.service.ITemplateService;
+import com.cbwleft.sms.mgr.modular.template.service.ITemplateService;
 
 /**
  * <p>
  * 短信模板表 服务实现类
  * </p>
  *
- * @author cbwleft123
+ * @author cbwleft
  * @since 2018-04-28
  */
 @Service

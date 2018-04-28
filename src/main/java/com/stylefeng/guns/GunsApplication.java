@@ -17,7 +17,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @author stylefeng
  * @Date 2017/5/21 12:06
  */
-@SpringBootApplication(scanBasePackages = {"com.cbwleft.sms.dao", "com.stylefeng.guns"})
+@SpringBootApplication(scanBasePackages = {"com.cbwleft.sms", "com.stylefeng.guns"})
 @MapperScan(basePackages = "com.cbwleft.sms.dao")
 public class GunsApplication extends WebMvcConfigurerAdapter{
 

@@ -1,4 +1,4 @@
-package com.stylefeng.guns.modular.app.controller;
+package com.cbwleft.sms.mgr.modular.app.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cbwleft.sms.dao.model.App;
+import com.cbwleft.sms.mgr.modular.app.service.IAppService;
 import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.core.log.LogObjectHolder;
 
 import org.springframework.web.bind.annotation.RequestParam;
-import com.stylefeng.guns.modular.app.service.IAppService;
 
 /**
  * 应用管理控制器
  *
- * @author fengshuonan
+ * @author cbwleft
  * @Date 2018-04-28 14:33:00
  */
 @Controller

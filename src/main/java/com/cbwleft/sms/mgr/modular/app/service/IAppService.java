@@ -1,4 +1,4 @@
-package com.stylefeng.guns.modular.app.service;
+package com.cbwleft.sms.mgr.modular.app.service;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import com.cbwleft.sms.dao.model.App;
  * 应用表 服务类
  * </p>
  *
- * @author cbwleft123
+ * @author cbwleft
  * @since 2018-04-28
  */
 public interface IAppService {
