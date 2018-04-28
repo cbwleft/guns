@@ -1,6 +1,8 @@
 package com.stylefeng.guns;
 
 import com.stylefeng.guns.config.properties.GunsProperties;
+
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +17,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @author stylefeng
  * @Date 2017/5/21 12:06
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.cbwleft.sms.dao", "com.stylefeng.guns"})
+@MapperScan(basePackages = "com.cbwleft.sms.dao")
 public class GunsApplication extends WebMvcConfigurerAdapter{
 
     protected final static Logger logger = LoggerFactory.getLogger(GunsApplication.class);
