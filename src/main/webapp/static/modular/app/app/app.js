@@ -18,7 +18,7 @@ App.initColumn = function () {
             {title: '应用名称', field: 'name', visible: true, align: 'center', valign: 'middle'},
             {title: '签名私钥', field: 'privateKey', visible: true, align: 'center', valign: 'middle'},
             {title: '短信前缀', field: 'prefix', visible: true, align: 'center', valign: 'middle'},
-            {title: '系统生成的数字验证码长度', field: 'validateCodeLength', visible: true, align: 'center', valign: 'middle'},
+            {title: '验证码长度', field: 'validateCodeLength', visible: true, align: 'center', valign: 'middle'},
             {title: '第三方渠道SDK配置参数', field: 'channelParams', visible: true, align: 'center', valign: 'middle'},
             {title: '创建时间', field: 'createDate', visible: true, align: 'center', valign: 'middle'},
             {title: '更新时间', field: 'updateDate', visible: true, align: 'center', valign: 'middle'}
