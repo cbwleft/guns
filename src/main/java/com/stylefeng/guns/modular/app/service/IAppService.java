@@ -16,4 +16,12 @@ public interface IAppService {
 
 	List<App> selectList(Object object);
 
+	App selectById(Integer appId);
+
+	int insert(App app);
+
+	int deleteById(Integer appId);
+
+	int updateById(App app);
+
 }

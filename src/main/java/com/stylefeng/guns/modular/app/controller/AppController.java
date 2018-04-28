@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cbwleft.sms.dao.model.App;
 import com.stylefeng.guns.common.controller.BaseController;
+import com.stylefeng.guns.core.log.LogObjectHolder;
+
 import org.springframework.web.bind.annotation.RequestParam;
 import com.stylefeng.guns.modular.app.service.IAppService;
 
@@ -48,9 +50,9 @@ public class AppController extends BaseController {
      */
     @RequestMapping("/app_update/{appId}")
     public String appUpdate(@PathVariable Integer appId, Model model) {
-        /*App app = appService.selectById(appId);
+        App app = appService.selectById(appId);
         model.addAttribute("item",app);
-        LogObjectHolder.me().set(app);*/
+        LogObjectHolder.me().set(app);
         return PREFIX + "app_edit.html";
     }
 
@@ -69,7 +71,7 @@ public class AppController extends BaseController {
     @RequestMapping(value = "/add")
     @ResponseBody
     public Object add(App app) {
-        //appService.insert(app);
+        appService.insert(app);
         return SUCCESS_TIP;
     }
 
@@ -79,7 +81,7 @@ public class AppController extends BaseController {
     @RequestMapping(value = "/delete")
     @ResponseBody
     public Object delete(@RequestParam Integer appId) {
-        //appService.deleteById(appId);
+        appService.deleteById(appId);
         return SUCCESS_TIP;
     }
 
@@ -89,7 +91,7 @@ public class AppController extends BaseController {
     @RequestMapping(value = "/update")
     @ResponseBody
     public Object update(App app) {
-        //appService.updateById(app);
+        appService.updateById(app);
         return SUCCESS_TIP;
     }
 
@@ -99,7 +101,6 @@ public class AppController extends BaseController {
     @RequestMapping(value = "/detail/{appId}")
     @ResponseBody
     public Object detail(@PathVariable("appId") Integer appId) {
-        //return appService.selectById(appId);
-    	return null;
+        return appService.selectById(appId);
     }
 }
