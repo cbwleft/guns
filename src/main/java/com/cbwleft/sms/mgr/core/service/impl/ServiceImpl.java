@@ -15,8 +15,8 @@ public class ServiceImpl <M extends BaseMapper<T>, T> implements IService<T>{
 	protected M baseMapper;
 
 	@Override
-	public List<T> selectList(Object params) {
-		return baseMapper.selectAll();
+	public List<T> selectList(T query) {
+		return baseMapper.select(query);
 	}
 
 	@Override

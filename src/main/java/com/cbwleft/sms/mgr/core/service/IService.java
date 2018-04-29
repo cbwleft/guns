@@ -15,7 +15,7 @@ import java.util.List;
 public interface IService<T> {
 	
 	
-	List<T> selectList(Object params);
+	List<T> selectList(T query);
 
     /**
      * <p>

@@ -68,10 +68,10 @@ public class MessageController extends BaseController {
      */
     @RequestMapping(value = "/list")
     @ResponseBody
-    public Object list(String condition) {
+    public Object list(Message query) {
     	PageReq params = defaultPage();
         PageHelper.offsetPage(params.getOffset(), params.getOffset());
-        List<Message> result = messageService.selectList(null);
+        List<Message> result = messageService.selectList(query);
         Page<Map<String, Object>> page = new Page<>();
         if(result instanceof Page) {
         	page.setTotal(((Page<?>) result).getTotal());

@@ -96,7 +96,7 @@ Message.delete = function () {
  */
 Message.search = function () {
     var queryData = {};
-    queryData['condition'] = $("#condition").val();
+    queryData['mobile'] = $("#mobile").val();
     Message.table.refresh({query: queryData});
 };
 
