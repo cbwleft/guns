@@ -17,7 +17,7 @@ Template.initColumn = function () {
             {title: '短信模板id', field: 'id', visible: true, align: 'center', valign: 'middle'},
             {title: '第三方渠道模板', field: 'channelTemplateNo', visible: true, align: 'center', valign: 'middle'},
             {title: '模板名称', field: 'name', visible: true, align: 'center', valign: 'middle'},
-            {title: '短信类型', field: 'type', visible: true, align: 'center', valign: 'middle'},
+            {title: '短信类型', field: 'typeName', visible: true, align: 'center', valign: 'middle'},
             {title: '短信模板', field: 'template', visible: true, align: 'center', valign: 'middle'},
             {title: '短信验证码字段', field: 'validateCodeKey', visible: true, align: 'center', valign: 'middle'},
             {title: '短信验证码有效时间（秒）', field: 'validateCodeExpire', visible: true, align: 'center', valign: 'middle'},

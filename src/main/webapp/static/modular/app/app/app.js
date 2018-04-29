@@ -16,10 +16,10 @@ App.initColumn = function () {
         {field: 'selectItem', radio: true},
             {title: '应用id', field: 'id', visible: true, align: 'center', valign: 'middle'},
             {title: '应用名称', field: 'name', visible: true, align: 'center', valign: 'middle'},
-            {title: '签名私钥', field: 'privateKey', visible: true, align: 'center', valign: 'middle'},
+            {title: '签名私钥', field: 'privateKey', visible: false, align: 'center', valign: 'middle'},
             {title: '短信前缀', field: 'prefix', visible: true, align: 'center', valign: 'middle'},
             {title: '验证码长度', field: 'validateCodeLength', visible: true, align: 'center', valign: 'middle'},
-            {title: '第三方渠道SDK配置参数', field: 'channelParams', visible: true, align: 'center', valign: 'middle'},
+            {title: '第三方渠道SDK配置参数', field: 'channelParams', visible: false, align: 'center', valign: 'middle'},
             {title: '创建时间', field: 'createDate', visible: true, align: 'center', valign: 'middle'},
             {title: '更新时间', field: 'updateDate', visible: true, align: 'center', valign: 'middle'}
     ];

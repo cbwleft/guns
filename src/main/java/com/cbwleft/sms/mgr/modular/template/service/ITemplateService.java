@@ -1,7 +1,5 @@
 package com.cbwleft.sms.mgr.modular.template.service;
 
-import java.util.List;
-
 import com.cbwleft.sms.dao.model.Template;
 import com.cbwleft.sms.mgr.core.service.IService;
 

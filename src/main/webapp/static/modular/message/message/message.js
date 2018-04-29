@@ -14,15 +14,15 @@ var Message = {
 Message.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
-            {title: '短信id', field: 'id', visible: true, align: 'center', valign: 'middle'},
+            {title: '短信id', field: 'id', visible: false, align: 'center', valign: 'middle'},
             {title: '手机号', field: 'mobile', visible: true, align: 'center', valign: 'middle'},
             {title: '短信参数', field: 'params', visible: true, align: 'center', valign: 'middle'},
             {title: '验证码', field: 'validateCode', visible: true, align: 'center', valign: 'middle'},
-            {title: '模板id', field: 'templateId', visible: true, align: 'center', valign: 'middle'},
-            {title: '发送状态', field: 'sendStatus', visible: true, align: 'center', valign: 'middle'},
-            {title: '验证码验证状态', field: 'validateStatus', visible: true, align: 'center', valign: 'middle'},
-            {title: '失败代码', field: 'failCode', visible: true, align: 'center', valign: 'middle'},
-            {title: '短信平台id', field: 'bizId', visible: true, align: 'center', valign: 'middle'},
+            {title: '模板id', field: 'templateId', visible: false, align: 'center', valign: 'middle'},
+            {title: '发送状态', field: 'sendStatusName', visible: true, align: 'center', valign: 'middle'},
+            {title: '验证状态', field: 'validateStatusName', visible: true, align: 'center', valign: 'middle'},
+            {title: '失败代码', field: 'failCode', visible: false, align: 'center', valign: 'middle'},
+            {title: '短信平台id', field: 'bizId', visible: false, align: 'center', valign: 'middle'},
             {title: '收到短信时间', field: 'reciveDate', visible: true, align: 'center', valign: 'middle'},
             {title: '创建时间', field: 'createDate', visible: true, align: 'center', valign: 'middle'},
             {title: '更新时间', field: 'updateDate', visible: true, align: 'center', valign: 'middle'}

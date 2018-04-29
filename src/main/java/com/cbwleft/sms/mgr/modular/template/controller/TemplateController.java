@@ -1,16 +1,25 @@
 package com.cbwleft.sms.mgr.modular.template.controller;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cbwleft.sms.dao.model.Template;
 import com.cbwleft.sms.mgr.modular.template.service.ITemplateService;
+import com.cbwleft.sms.mgr.modular.template.warpper.TemplateWarpper;
 import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.core.log.LogObjectHolder;
+import com.stylefeng.guns.core.support.BeanKit;
+
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -61,7 +70,10 @@ public class TemplateController extends BaseController {
     @RequestMapping(value = "/list")
     @ResponseBody
     public Object list(String condition) {
-        return templateService.selectList(null);
+        List<Template> result = templateService.selectList(null);
+        List<Map<String, Object>> list = new ArrayList<>();
+        result.forEach(template -> list.add(BeanKit.beanToMap(template)));
+        return new TemplateWarpper(list).warp();
     }
 
     /**
@@ -90,6 +102,9 @@ public class TemplateController extends BaseController {
     @RequestMapping(value = "/update")
     @ResponseBody
     public Object update(Template template) {
+    	if(template.getTemplate() != null) {
+    		template.setTemplate(template.getTemplate().trim());
+    	}
         templateService.updateById(template);
         return SUCCESS_TIP;
     }
