@@ -74,6 +74,18 @@ INSERT INTO `sys_dict` VALUES ('36', '1', '35', '启用', null);
 INSERT INTO `sys_dict` VALUES ('37', '2', '35', '冻结', null);
 INSERT INTO `sys_dict` VALUES ('38', '3', '35', '已删除', null);
 
+-- 数据字典
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('39', '0', '0', '短信类型', NULL);
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('40', '0', '39', '验证码', NULL);
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('41', '1', '39', '普通短信', NULL);
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('42', '0', '0', '发送状态', NULL);
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('43', '0', '42', '发送失败', NULL);
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('44', '1', '42', '发送中', NULL);
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('45', '2', '42', '发送成功', NULL);
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('46', '0', '0', '验证状态', NULL);
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('47', '0', '46', '未验证', NULL);
+INSERT INTO `sys_dict` (`id`, `num`, `pid`, `name`, `tips`) VALUES ('48', '1', '46', '已验证', NULL);
+
 -- ----------------------------
 -- Table structure for sys_expense
 -- ----------------------------
@@ -192,6 +204,26 @@ INSERT INTO `sys_menu` VALUES ('165', 'to_assign_role', 'mgr', '[0],[system],[mg
 INSERT INTO `sys_menu` VALUES ('166', 'to_user_edit', 'mgr', '[0],[system],[mgr],', '编辑用户跳转', '', '/mgr/user_edit', '9', '3', '0', null, '1', null);
 INSERT INTO `sys_menu` VALUES ('167', 'mgr_list', 'mgr', '[0],[system],[mgr],', '用户列表', '', '/mgr/list', '10', '3', '0', null, '1', null);
 
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('5202', 'message', '0', '[0],', '短信管理', 'fa-envelope', '/message', '102', '1', '1', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('5203', 'message_list', 'message', '[0],[message],', '短信管理列表', '', '/message/list', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('5204', 'message_add', 'message', '[0],[message],', '短信管理添加', '', '/message/add', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('5205', 'message_update', 'message', '[0],[message],', '短信管理更新', '', '/message/update', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('5206', 'message_delete', 'message', '[0],[message],', '短信管理删除', '', '/message/delete', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('5207', 'message_detail', 'message', '[0],[message],', '短信管理详情', '', '/message/detail', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6353', 'app', '0', '[0],', '应用管理', 'fa-android', '/app', '100', '1', '1', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6354', 'app_list', 'app', '[0],[app],', '应用管理列表', '', '/app/list', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6355', 'app_add', 'app', '[0],[app],', '应用管理添加', '', '/app/add', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6356', 'app_update', 'app', '[0],[app],', '应用管理更新', '', '/app/update', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6357', 'app_delete', 'app', '[0],[app],', '应用管理删除', '', '/app/delete', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6358', 'app_detail', 'app', '[0],[app],', '应用管理详情', '', '/app/detail', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6657', 'template', '0', '[0],', '短信模板', 'fa-copy', '/template', '101', '1', '1', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6658', 'template_list', 'template', '[0],[template],', '短信模板列表', '', '/template/list', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6659', 'template_add', 'template', '[0],[template],', '短信模板添加', '', '/template/add', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6660', 'template_update', 'template', '[0],[template],', '短信模板更新', '', '/template/update', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6661', 'template_delete', 'template', '[0],[template],', '短信模板删除', '', '/template/delete', '99', '2', '0', NULL, '1', '0');
+INSERT INTO `sys_menu` (`id`, `code`, `pcode`, `pcodes`, `name`, `icon`, `url`, `num`, `levels`, `ismenu`, `tips`, `status`, `isopen`) VALUES ('6662', 'template_detail', 'template', '[0],[template],', '短信模板详情', '', '/template/detail', '99', '2', '0', NULL, '1', '0');
+
+
 -- ----------------------------
 -- Table structure for sys_notice
 -- ----------------------------
@@ -209,8 +241,8 @@ CREATE TABLE `sys_notice` (
 -- ----------------------------
 -- Records of sys_notice
 -- ----------------------------
-INSERT INTO `sys_notice` VALUES ('6', '世界', '10', '欢迎使用Guns管理系统', '2017-01-11 08:53:20', '1');
-INSERT INTO `sys_notice` VALUES ('8', '你好', null, '你好', '2017-05-10 19:28:57', '1');
+INSERT INTO `sys_notice` (`id`, `title`, `type`, `content`, `createtime`, `creater`) VALUES ('8', '为了方便测试，已开放全部权限，请勿修改id为1的数据，否则无法成功发出短信', NULL, '为了方便测试，已开放全部权限，请勿修改id为1的数据，否则无法成功发出短信', '2017-05-10 19:28:57', '1');
+
 
 -- ----------------------------
 -- Table structure for sys_operation_log
