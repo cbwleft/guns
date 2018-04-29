@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,8 @@ import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.common.page.PageReq;
 import com.stylefeng.guns.core.log.LogObjectHolder;
 import com.stylefeng.guns.core.support.BeanKit;
+
+import tk.mybatis.mapper.entity.Example;
 
 /**
  * 短信管理控制器
@@ -71,7 +74,21 @@ public class MessageController extends BaseController {
     public Object list(Message query) {
     	PageReq params = defaultPage();
         PageHelper.offsetPage(params.getOffset(), params.getOffset());
-        List<Message> result = messageService.selectList(query);
+        Example example = new Example(Message.class);
+        if (!StringUtils.isEmpty(query.getMobile())) {
+        	example.createCriteria().andEqualTo("mobile", query.getMobile());
+        }
+        example.orderBy("id").desc();
+        /*if (!params.isOpenSort()) {
+        	example.orderBy("id").desc();
+        } else {
+        	if(params.isAsc()) {
+        		example.orderBy(params.getSort()).asc();
+        	} else {
+        		example.orderBy(params.getSort()).desc();
+        	}
+        }*/
+        List<Message> result = messageService.selectByExample(example);
         Page<Map<String, Object>> page = new Page<>();
         if(result instanceof Page) {
         	page.setTotal(((Page<?>) result).getTotal());
