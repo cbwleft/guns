@@ -73,7 +73,7 @@ public class MessageController extends BaseController {
     @ResponseBody
     public Object list(Message query) {
     	PageReq params = defaultPage();
-        PageHelper.offsetPage(params.getOffset(), params.getOffset());
+        PageHelper.offsetPage(params.getOffset(), params.getLimit());
         Example example = new Example(Message.class);
         if (!StringUtils.isEmpty(query.getMobile())) {
         	example.createCriteria().andEqualTo("mobile", query.getMobile());
