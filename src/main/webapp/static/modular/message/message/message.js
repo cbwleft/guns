@@ -18,7 +18,7 @@ Message.initColumn = function () {
             {title: '手机号', field: 'mobile', visible: true, align: 'center', valign: 'middle'},
             {title: '短信参数', field: 'params', visible: true, align: 'center', valign: 'middle'},
             {title: '验证码', field: 'validateCode', visible: true, align: 'center', valign: 'middle'},
-            {title: '模板id', field: 'templateId', visible: false, align: 'center', valign: 'middle'},
+            {title: '模板id', field: 'templateId', visible: true, align: 'center', valign: 'middle'},
             {title: '发送状态', field: 'sendStatusName', visible: true, align: 'center', valign: 'middle'},
             {title: '验证状态', field: 'validateStatusName', visible: true, align: 'center', valign: 'middle'},
             {title: '失败代码', field: 'failCode', visible: false, align: 'center', valign: 'middle'},
