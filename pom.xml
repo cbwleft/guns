@@ -179,7 +179,7 @@
         <dependency>
     		<groupId>com.cbwleft</groupId>
 			<artifactId>sms-dal</artifactId>
-			<version>1.1.0</version>
+			<version>1.1.1</version>
     	</dependency>
 
     </dependencies>
