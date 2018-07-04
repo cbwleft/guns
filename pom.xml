@@ -175,12 +175,12 @@
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3.version}</version>
         </dependency>
-        
+
         <dependency>
-    		<groupId>com.cbwleft</groupId>
-			<artifactId>sms-dal</artifactId>
-			<version>1.1.1</version>
-    	</dependency>
+            <groupId>com.cbwleft</groupId>
+            <artifactId>sms-dal</artifactId>
+            <version>1.2.0</version>
+        </dependency>
 
     </dependencies>
 
