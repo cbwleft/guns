@@ -23,6 +23,8 @@ Message.initColumn = function () {
             {title: '验证状态', field: 'validateStatusName', visible: true, align: 'center', valign: 'middle'},
             {title: '失败代码', field: 'failCode', visible: false, align: 'center', valign: 'middle'},
             {title: '短信平台id', field: 'bizId', visible: false, align: 'center', valign: 'middle'},
+            {title: '短信发送渠道', field: 'channel', visible: false, align: 'center', valign: 'middle'},
+            {title: '重试次数', field: 'retry', visible: false, align: 'center', valign: 'middle'},
             {title: '收到短信时间', field: 'receiveDate', visible: true, align: 'center', valign: 'middle'},
             {title: '创建时间', field: 'createDate', visible: true, align: 'center', valign: 'middle'},
             {title: '更新时间', field: 'updateDate', visible: true, align: 'center', valign: 'middle'}
